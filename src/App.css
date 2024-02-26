@@ -1,0 +1,16 @@
+:root {
+  --background-color: #000;
+  --color1: #0c0032;
+  --color2: #190061;
+  --color3: #240090;
+  --color4: #3500d3;
+  --color5: #282828;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5vh;
+}
