@@ -1,5 +1,31 @@
+/*
+:root[theme="dark"] {
+  background-color: rgb(13, 17, 23);
+  --theme-btn-color: white;
+  --paragraph-color: rgb(214, 214, 214);
+  --header-color: white;
+  --img-bright: brightness(0.75);
+  --img-theme: invert(100%);
+  --a-color: white;
+  --a-color-hover: rgb(181, 181, 181);
+  --a-decoration-color: grey;
+}
+
+:root[theme="light"] {
+  background-color: white;
+  --theme-btn-color: rgb(13, 17, 23);
+  --paragraph-color: rgb(85, 85, 85);
+  --header-color: black;
+  --img-bright: brightness(1);
+  --img-theme: invert(0%);
+  --a-color: black;
+  --a-color-hover: grey;
+  --a-decoration-color: rgb(181, 181, 181);
+}
+*/
+
 :root {
-  --background-color: #000;
+  --color0: #000;
   --color1: #0c0032;
   --color2: #190061;
   --color3: #240090;
@@ -13,4 +39,40 @@ a {
 a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5vh;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--header-color);
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+.icon {
+  cursor: default;
+  height: 2rem;
+  filter: var(--img-theme);
+  padding: 0vw 0.25vw;
+}
+
+.contact-info-banner,
+.contact-info-banner > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0vh 1vw;
+}
+
+.contact-info-banner::before,
+.contact-info-banner::after {
+  content: "";
+  position: relative;
+  background-color: var(--color2);
+  height: 40px;
+  width: 4px;
 }
