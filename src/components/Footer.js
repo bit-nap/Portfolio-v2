@@ -6,9 +6,13 @@ function Footer() {
   let year = new Date().getFullYear();
   return (
     <footer>
-      <ContactBanner></ContactBanner>
-      <div id="copyright">
-        Copyright &copy; {year} Norton Andres Perez. All Rights Reserved.
+      <div className="footer-container">
+        <ContactBanner></ContactBanner>
+        <div id="copyright">
+          <p>
+            Copyright &copy; {year} Norton Andres Perez. All Rights Reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
