@@ -1,6 +1,6 @@
 import React from "react";
-import emailIcon from "../assets/email.png";
-import linkedinIcon from "../assets/linkedin.png";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   let year = new Date().getFullYear();
@@ -24,13 +24,13 @@ function ContactBanner() {
       <h1>Contact me</h1>
       <div className="contact-info-banner">
         <div>
-          <img src={emailIcon} alt="Email icon" className="icon" />
+          <MdEmail className="icon"></MdEmail>
           <p>
             <a href="mailto:nap1118@rit.edu">nap1118@rit.edu</a>
           </p>
         </div>
         <div>
-          <img src={linkedinIcon} alt="LinkedIn icon" className="icon" />
+          <FaLinkedin className="icon"></FaLinkedin>
           <p>
             <a href="https://www.linkedin.com/in/norton-a-perez/">LinkedIn</a>
           </p>
