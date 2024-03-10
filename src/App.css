@@ -143,9 +143,10 @@ h3 {
 }
 
 .project-row {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0vh 4vw;
-  flex-wrap: wrap;
   margin: 0vh 2vw 6vh 2vw;
 }
 
