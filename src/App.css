@@ -138,13 +138,28 @@ h3 {
 }
 
 .project-container {
-  display: grid;
+  display: flex;
+  height: auto;
 }
 
-.project-box {
-  border: var(--color3) 0.2rem solid;
+.project-row {
+  justify-content: center;
+  padding: 0vh 4vw;
+  flex-wrap: wrap;
+  margin: 0vh 2vw 6vh 2vw;
+}
+
+.project-col {
+  width: 24rem;
+  margin: 3vh 1vw;
+}
+
+.project-card {
+  color: var(--color4);
+  height: 100%;
   margin: 1vh 1vw;
   padding: 1vh 1vw;
+  border: var(--color3) 0.2rem solid;
 }
 
 .project-links {

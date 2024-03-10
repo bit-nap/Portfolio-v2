@@ -35,7 +35,7 @@ function Projects() {
     if ("description" in info) desc = info["description"];
 
     projectsList.push(
-      <Col md={4}>
+      <Col md={4} className="project-col">
         <ProjectBoxes
           title={project}
           github={ghLink}
@@ -53,7 +53,9 @@ function Projects() {
         <p>browse my recent</p>
         <h1>PROJECTS</h1>
         <div className="projects-container">
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Row
+            className="project-row"
+          >
             {projectsList}
           </Row>
         </div>
@@ -65,15 +67,7 @@ function Projects() {
 function ProjectBoxes(args) {
   return (
     <>
-      <Card
-        style={{
-          color: "#c5c6c7",
-          width: "18rem",
-          margin: "1vh 1vw",
-          padding: "1vh 1vw",
-          border: "var(--color3) 0.2rem solid",
-        }}
-      >
+      <Card className="project-card">
         {!args.imgSrc && <FaTools />}
         {args.imgSrc && <Card.Img variant="top" src={args.image}></Card.Img>}
         <Card.Body>
