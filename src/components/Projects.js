@@ -2,29 +2,31 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Row, Col } from "react-bootstrap";
 import { BsGithub } from "react-icons/bs";
+import RSA from "../assets/RSA.png";
+import Qbert from "../assets/Q-bert1.png";
+import REST from "../assets/REST.png";
 
 const projects = {
   "Encrypted server communications": {
-    image: "",
+    image: RSA,
     components: "C#, Multithreading, RSA Algorithm",
     description:
       "Developed an RSA-encrypted client-server communication system for secure data exchange. Implemented key generation through multithreading to reduce creation time. Additional security methods, sending non-readable messages to the server and secure storage of cryptographic keys.",
   },
   "Digit Recognizer AI Challenge": {
-    image: "",
     components: "Python, MNIST, Random Forest, Logistic Regression",
     description:
       "I completed the Digit Recognizer Challenge, a classic machine-learning scenario. This project was to create models from two classes of machine learning algorithms to test how each works and evaluate their performance.",
     github: "https://github.com/bit-nap/CSCI.331-Digit-Recognizer",
   },
   "Q-bert AI agent": {
-    image: "",
+    image: Qbert,
     components: "Python, PyTorch, gymnasium",
     description:
       "Used reinforcement learning to solve the arcade game Q-bert. Created a neural network that played the game optimally and successfully cleared levels.",
   },
   "REST API": {
-    image: "",
+    image: REST,
     components: "Java, Angular, JUnit",
     description:
       "Coordinated effectively in an Agile team of five to developed a Java-based API. We later implemented a website in Angular that interacted with the API to display information.",
@@ -79,7 +81,13 @@ function ProjectBoxes(args) {
   return (
     <>
       <Card className="project-card">
-        {args.imgSrc && <Card.Img variant="top" src={args.image}></Card.Img>}
+        {args.image && (
+          <Card.Img
+            variant="top"
+            src={args.image}
+            style={{ width: "-webkit-fill-available" }}
+          ></Card.Img>
+        )}
         <Card.Body>
           <Card.Title className="project-title">{args.title}</Card.Title>
           <Card.Subtitle className="project-subtitle">

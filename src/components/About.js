@@ -70,112 +70,114 @@ function SkillsetBoxes() {
 }
 
 function GetRandomSkill(params) {
-  console.log(params);
-  if (params.name === "python") {
-    return (
-      <Col className="skillset-col">
-        <FaPython />
-        <p className="skill-name">Python</p>
-      </Col>
-    );
-  } else if (params.name === "java") {
-    return (
-      <Col className="skillset-col">
-        <FaJava />
-        <p className="skill-name">Java</p>
-      </Col>
-    );
-  } else if (params.name === "javascript") {
-    return (
-      <Col className="skillset-col">
-        <SiJavascript />
-        <p className="skill-name">JavaScript</p>
-      </Col>
-    );
-  } else if (params.name === "c") {
-    return (
-      <Col className="skillset-col">
-        <SiC />
-        <p className="skill-name">C</p>
-      </Col>
-    );
-  } else if (params.name === "c#") {
-    return (
-      <Col className="skillset-col">
-        <SiCsharp />
-        <p className="skill-name">C#</p>
-      </Col>
-    );
-  } else if (params.name === "c++") {
-    return (
-      <Col className="skillset-col">
-        <SiCplusplus />
-        <p className="skill-name">C++</p>
-      </Col>
-    );
-  } else if (params.name === "angular") {
-    return (
-      <Col className="skillset-col">
-        <FaAngular />
-        <p className="skill-name">Angular</p>
-      </Col>
-    );
-  } else if (params.name === "react") {
-    return (
-      <Col className="skillset-col">
-        <FaReact />
-        <p className="skill-name">React</p>
-      </Col>
-    );
-  } else if (params.name === "postgresql") {
-    return (
-      <Col className="skillset-col">
-        <SiPostgresql />
-        <p className="skill-name">PostgreSQL</p>
-      </Col>
-    );
-  } else if (params.name === "nodejs") {
-    return (
-      <Col className="skillset-col">
-        <FaNode />
-        <p className="skill-name">Node.js</p>
-      </Col>
-    );
-  } else if (params.name === "vscode") {
-    return (
-      <Col className="skillset-col">
-        <SiVisualstudiocode />
-        <p className="skill-name">Visual Studio Code</p>
-      </Col>
-    );
-  } else if (params.name === "pycharm") {
-    return (
-      <Col className="skillset-col">
-        <SiPycharm />
-        <p className="skill-name">PyCharm</p>
-      </Col>
-    );
-  } else if (params.name === "intellij") {
-    return (
-      <Col className="skillset-col">
-        <SiIntellijidea />
-        <p className="skill-name">IntelliJ IDEA</p>
-      </Col>
-    );
-  } else if (params.name === "rider") {
-    return (
-      <Col className="skillset-col">
-        <SiRider />
-        <p className="skill-name">Rider</p>
-      </Col>
-    );
-  } else if (params.name === "datagrip") {
-    return (
-      <Col className="skillset-col">
-        <SiDatagrip />
-        <p className="skill-name">DataGrip</p>
-      </Col>
-    );
+  switch (params.name) {
+    case "python":
+      return (
+        <Col className="skillset-col">
+          <FaPython />
+          <p className="skill-name">Python</p>
+        </Col>
+      );
+    case "java":
+      return (
+        <Col className="skillset-col">
+          <FaJava />
+          <p className="skill-name">Java</p>
+        </Col>
+      );
+    case "javascript":
+      return (
+        <Col className="skillset-col">
+          <SiJavascript />
+          <p className="skill-name">JavaScript</p>
+        </Col>
+      );
+    case "c":
+      return (
+        <Col className="skillset-col">
+          <SiC />
+          <p className="skill-name">C</p>
+        </Col>
+      );
+    case "c#":
+      return (
+        <Col className="skillset-col">
+          <SiCsharp />
+          <p className="skill-name">C#</p>
+        </Col>
+      );
+    case "c++":
+      return (
+        <Col className="skillset-col">
+          <SiCplusplus />
+          <p className="skill-name">C++</p>
+        </Col>
+      );
+    case "angular":
+      return (
+        <Col className="skillset-col">
+          <FaAngular />
+          <p className="skill-name">Angular</p>
+        </Col>
+      );
+    case "react":
+      return (
+        <Col className="skillset-col">
+          <FaReact />
+          <p className="skill-name">React</p>
+        </Col>
+      );
+    case "postgresql":
+      return (
+        <Col className="skillset-col">
+          <SiPostgresql />
+          <p className="skill-name">PostgreSQL</p>
+        </Col>
+      );
+    case "nodejs":
+      return (
+        <Col className="skillset-col">
+          <FaNode />
+          <p className="skill-name">Node.js</p>
+        </Col>
+      );
+    case "vscode":
+      return (
+        <Col className="skillset-col">
+          <SiVisualstudiocode />
+          <p className="skill-name">Visual Studio Code</p>
+        </Col>
+      );
+    case "pycharm":
+      return (
+        <Col className="skillset-col">
+          <SiPycharm />
+          <p className="skill-name">PyCharm</p>
+        </Col>
+      );
+    case "intellij":
+      return (
+        <Col className="skillset-col">
+          <SiIntellijidea />
+          <p className="skill-name">IntelliJ IDEA</p>
+        </Col>
+      );
+    case "rider":
+      return (
+        <Col className="skillset-col">
+          <SiRider />
+          <p className="skill-name">Rider</p>
+        </Col>
+      );
+    case "datagrip":
+      return (
+        <Col className="skillset-col">
+          <SiDatagrip />
+          <p className="skill-name">DataGrip</p>
+        </Col>
+      );
+    default:
+      break;
   }
 }
 
