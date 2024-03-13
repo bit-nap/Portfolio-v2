@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Row, Col } from "react-bootstrap";
 import { BsGithub } from "react-icons/bs";
+import { FaKaggle } from "react-icons/fa";
 import RSA from "../assets/RSA.png";
 import Qbert from "../assets/Q-bert1.png";
 import REST from "../assets/REST.png";
@@ -18,6 +19,8 @@ const projects = {
     description:
       "I completed the Digit Recognizer Challenge, a classic machine-learning scenario. This project was to create models from two classes of machine learning algorithms to test how each works and evaluate their performance.",
     github: "https://github.com/bit-nap/CSCI.331-Digit-Recognizer",
+    kaggle:
+      "https://www.kaggle.com/code/nortonperez/csci-331-digit-recognizer-notebook",
   },
   "Q-bert AI agent": {
     image: Qbert,
@@ -44,14 +47,11 @@ function Projects() {
   let projectsList = [];
 
   for (const [project, info] of Object.entries(projects)) {
-    let ghLink = null;
-    let image = null;
-    let comp = null;
-    let desc = null;
-    if ("github" in info) ghLink = info["github"];
-    if ("image" in info) image = info["image"];
-    if ("components" in info) comp = info["components"];
-    if ("description" in info) desc = info["description"];
+    let image = "image" in info ? info["image"] : null;
+    let comp = "components" in info ? info["components"] : null;
+    let desc = "description" in info ? info["description"] : null;
+    let ghLink = "github" in info ? info["github"] : null;
+    let kgLink = "kaggle" in info ? info["kaggle"] : null;
 
     projectsList.push(
       <Col md={3} className="project-col">
@@ -61,6 +61,7 @@ function Projects() {
           image={image}
           subtitle={comp}
           description={desc}
+          kaggle={kgLink}
         ></ProjectBoxes>
       </Col>
     );
@@ -96,17 +97,29 @@ function ProjectBoxes(args) {
           <Card.Text style={{ textAlign: "justify" }}>
             {args.description}
           </Card.Text>
+        </Card.Body>
+        <Card.Footer>
           <div className="project-links">
             {args.github && (
               <>
-                <BsGithub className="icon"></BsGithub>
+                <BsGithub className="icon" />
                 <p>
                   <a href={args.github}>GitHub</a>
                 </p>
               </>
             )}
           </div>
-        </Card.Body>
+          <div className="project-links">
+            {args.kaggle && (
+              <>
+                <FaKaggle className="icon" />
+                <p>
+                  <a href={args.kaggle}>kaggle</a>
+                </p>
+              </>
+            )}
+          </div>
+        </Card.Footer>
       </Card>
     </>
   );

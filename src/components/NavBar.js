@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 
-function closeMobileMenu() {}
-
 function NavBar() {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
 
   return (
     <>
@@ -20,21 +16,17 @@ function NavBar() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <a href="/" className="nav-links" onClick={closeMobileMenu}>
+              <a href="/" className="nav-links">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a
-                href="/projects"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <a href="/projects" className="nav-links">
                 Projects
               </a>
             </li>
             <li className="nav-item">
-              <a href="/about" className="nav-links" onClick={closeMobileMenu}>
+              <a href="/about" className="nav-links">
                 About
               </a>
             </li>

@@ -34,6 +34,7 @@
   --color6: #fff;
   /* specific variables */
   --navigation-color: #191717;
+  --navigation-items: #282828;
   --img-theme: invert(100%);
   --header-color: var(--color6);
 }
@@ -47,7 +48,6 @@ body {
   );
   background-size: 400% 400%;
   animation: waves 15s ease infinite;
-  height: 100vh;
 }
 
 p {
@@ -86,8 +86,43 @@ h3 {
 
 /* NAVBAR */
 .navbar-container {
+  display: flex;
+  padding: 0vh 2vw;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--navigation-color);
-  padding: 1vh 2vw;
+  height: 8vh;
+}
+
+.navbar-logo {
+  font-size: 3vw;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0vh 1vw;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--navigation-items);
+  padding: 0vh 0.5vw;
+  font-size: 2vh;
+}
+.nav-item:hover {
+  background-color: var(--color2);
+}
+
+.nav-links:hover {
+  text-decoration: none;
 }
 
 /* FOOTER */
@@ -174,7 +209,11 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0vh 1vw;
+  padding: 1vh 1vw;
+}
+
+.project-links > p {
+  margin: 0;
 }
 
 /* ABOUT */
@@ -195,11 +234,6 @@ h3 {
 }
 
 .skillset-col {
-  padding: 2rem;
-  margin: 1rem;
-}
-
-.skill-name {
-  font-size: 1.25rem;
-  margin: 0.5vh 0vw;
+  padding: 2vw;
+  margin: 0.5rem;
 }
