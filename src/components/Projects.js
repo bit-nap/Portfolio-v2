@@ -69,7 +69,7 @@ function Projects() {
 
   return (
     <div className="projects-page">
-      <p>browse my recent</p>
+      <p className="pre-title">browse my recent</p>
       <h1>PROJECTS</h1>
       <div className="projects-container">
         <Row className="project-row">{projectsList}</Row>
@@ -114,7 +114,7 @@ function ProjectBoxes(args) {
               <>
                 <FaKaggle className="icon" />
                 <p>
-                  <a href={args.kaggle}>kaggle</a>
+                  <a href={args.kaggle}>Kaggle</a>
                 </p>
               </>
             )}

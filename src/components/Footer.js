@@ -21,7 +21,7 @@ function Footer() {
 function ContactBanner() {
   return (
     <div>
-      <p>get in touch</p>
+      <p className="pre-title">get in touch</p>
       <h1>CONTACT ME</h1>
       <div className="contact-info-banner">
         <div>
