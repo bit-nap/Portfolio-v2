@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
-import { FaPython, FaJava, FaAngular, FaReact, FaNode } from "react-icons/fa";
+import {
+  FaPython,
+  FaJava,
+  FaAngular,
+  FaReact,
+  FaNode,
+  FaGitAlt,
+} from "react-icons/fa";
 import {
   SiCsharp,
   SiJavascript,
@@ -20,6 +27,7 @@ const skillIcons = [
   <FaAngular />,
   <FaReact />,
   <FaNode />,
+  <FaGitAlt />,
   <SiCsharp />,
   <SiJavascript />,
   <SiC />,
@@ -50,9 +58,9 @@ function SkillsetBoxes() {
   const [skills, setSkills] = useState();
 
   useEffect(() => {
-    let i = 0;
+    let shuffle = 0;
     const interval = setInterval(() => {
-      if (i < 50) {
+      if (shuffle < 50) {
         for (let i = skillIcons.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [skillIcons[i], skillIcons[j]] = [skillIcons[j], skillIcons[i]];
@@ -64,8 +72,8 @@ function SkillsetBoxes() {
         }
 
         setSkills(skillsList);
-        console.log(i);
-        i += 1;
+        console.log(shuffle);
+        shuffle += 1;
       }
     }, 100);
 

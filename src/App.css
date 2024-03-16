@@ -170,7 +170,56 @@ h3 {
 
 /* HOME */
 .home-container {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 5vw;
+}
+
+.pfp-container {
+  align-items: center;
+  position: relative;
+  display: flex;
+  padding: 2rem;
+  height: calc(15rem + 10vw);
+  width: calc(15rem + 10vw);
+}
+
+.main-pfp {
+  display: flex;
+  width: inherit;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  transition: all 500ms ease;
+}
+
+.back-pfp {
+  display: flex;
+  width: inherit;
+  border-radius: 100%;
+  position: absolute;
+  transition: all 500ms ease;
+}
+
+.intro-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 1rem;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color6);
+}
+.profile-icons {
+  display: flex;
+  width: 3vw;
+  padding: 0.5rem;
 }
 
 /* PROJECTS */
