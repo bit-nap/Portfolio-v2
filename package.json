@@ -1,6 +1,6 @@
 {
-  "homepage": "https://bit-nap.github.io/Portfolio/",
-  "name": "p",
+  "name": "portfolio",
+  "homepage": "https://bit-nap.github.io/Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
