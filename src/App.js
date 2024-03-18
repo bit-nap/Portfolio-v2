@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="https://bit-nap.github.io/Portfolio/">
+    <BrowserRouter basename={"/Portfolio"}>
       <div className="App">
         <NavBar></NavBar>
         <Routes>
