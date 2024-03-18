@@ -86,7 +86,7 @@ function ProjectBoxes(args) {
           <Card.Img
             variant="top"
             src={args.image}
-            style={{ width: "-webkit-fill-available" }}
+            style={{ width: "100%" }}
           ></Card.Img>
         )}
         <Card.Body>

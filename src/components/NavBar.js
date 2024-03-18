@@ -11,7 +11,7 @@ function NavBar() {
           <a href="/" className="navbar-logo">
             Norton A. Perez
           </a>
-          <div className="menu-icon icon" onClick={handleClick}>
+          <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>

@@ -60,7 +60,7 @@ function SkillsetBoxes() {
   useEffect(() => {
     let shuffle = 0;
     const interval = setInterval(() => {
-      if (shuffle < 50) {
+      if (shuffle < 25) {
         for (let i = skillIcons.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [skillIcons[i], skillIcons[j]] = [skillIcons[j], skillIcons[i]];
@@ -72,7 +72,7 @@ function SkillsetBoxes() {
         }
 
         setSkills(skillsList);
-        console.log(shuffle);
+        // console.log(shuffle);
         shuffle += 1;
       }
     }, 100);
