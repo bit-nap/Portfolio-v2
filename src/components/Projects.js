@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Row, Col } from "react-bootstrap";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsBoxArrowUpRight } from "react-icons/bs";
 import { FaKaggle } from "react-icons/fa";
 import RSA from "../assets/RSA.png";
 import Qbert from "../assets/Q-bert1.png";
 import REST from "../assets/REST.png";
 
+// projects
 const projects = {
   "Encrypted server communications": {
     image: RSA,
@@ -43,6 +44,11 @@ const projects = {
   },
 };
 
+/**
+ * creates a Projects page that displays all projects above
+ *
+ * @returns Projects page
+ */
 function Projects() {
   let projectsList = [];
 
@@ -52,16 +58,19 @@ function Projects() {
     let desc = "description" in info ? info["description"] : null;
     let ghLink = "github" in info ? info["github"] : null;
     let kgLink = "kaggle" in info ? info["kaggle"] : null;
+    let exLink = "externalLink" in info ? info["externalLink"] : null;
 
+    // call ProjectBoxes with the argument fields below
     projectsList.push(
       <Col md={3} className="project-col">
         <ProjectBoxes
-          title={project}
-          github={ghLink}
           image={image}
+          title={project}
           subtitle={comp}
           description={desc}
+          github={ghLink}
           kaggle={kgLink}
+          external={exLink}
         ></ProjectBoxes>
       </Col>
     );
@@ -78,6 +87,12 @@ function Projects() {
   );
 }
 
+/**
+ * A function to make a Card for a project containing info about the project and relevant links
+ *
+ * @param {*} args the args pased. fields are: image, title, subtitle, description, github, kaggle, external
+ * @returns a singular Card with the arguments that are NOT null
+ */
 function ProjectBoxes(args) {
   return (
     <>
@@ -98,27 +113,31 @@ function ProjectBoxes(args) {
             {args.description}
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <div className="project-links">
-            {args.github && (
-              <>
-                <BsGithub className="icon" />
-                <p>
-                  <a href={args.github}>GitHub</a>
-                </p>
-              </>
-            )}
-          </div>
-          <div className="project-links">
-            {args.kaggle && (
-              <>
-                <FaKaggle className="icon" />
-                <p>
-                  <a href={args.kaggle}>Kaggle</a>
-                </p>
-              </>
-            )}
-          </div>
+        <Card.Footer style={{ marginBottom: "2vh" }}>
+          {args.github && (
+            <div className="project-links">
+              <BsGithub className="icon" />
+              <p>
+                <a href={args.github}>GitHub</a>
+              </p>
+            </div>
+          )}
+          {args.kaggle && (
+            <div className="project-links">
+              <FaKaggle className="icon" />
+              <p>
+                <a href={args.kaggle}>Kaggle</a>
+              </p>
+            </div>
+          )}
+          {args.external && (
+            <div className="project-links">
+              <BsBoxArrowUpRight className="icon" />
+              <p>
+                <a href={args.external}>Demo</a>
+              </p>
+            </div>
+          )}
         </Card.Footer>
       </Card>
     </>

@@ -5,23 +5,30 @@ import { BsGithub } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { FaLinkedin } from "react-icons/fa";
 
+/**
+ * creates a Home page that contains name, titles, cv
+ *
+ * @returns Home page
+ */
 function Home() {
   const [titleDisplayed, setTitle] = useState("");
 
+  // effect for the title write/delete char by char
   useEffect(() => {
     const possibleTitles = [
       "PROGRAMMER",
       "SOFTWARE DEVELOPER",
       "WEB DEVELOPER",
-      "FULL STACK DEV",
+      "FULL STACK DEVELOPER",
     ];
+    // initial values
     let titleIndex = 0;
     let title = possibleTitles[titleIndex];
     let index = 0;
     let operation = "inc";
 
     const interval = setInterval(() => {
-      // the character by character writing of title
+      // interval is necessary for proper timing on the character by character writing of title
       // console.log(title + " : " + index);
       setTitle(title.substring(0, index));
       if (index === 0 && operation === "dec") {
@@ -33,11 +40,12 @@ function Home() {
         operation = "dec";
         index -= 1;
       } else {
+        // write/delete based on the operation
         operation === "inc" ? (index += 1) : (index -= 1);
       }
     }, 176);
     return () => clearInterval(interval);
-  }, []);
+  }, []); // no variable, if you are curious add [titleDisplayed] and look at console.log(title + " : " + index);
 
   return (
     <div className="home-container">

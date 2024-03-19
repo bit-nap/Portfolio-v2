@@ -2,6 +2,11 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 
+/**
+ * creates a Footer component that has copyright and contact info
+ *
+ * @returns Footer component
+ */
 function Footer() {
   let year = new Date().getFullYear();
   return (
@@ -18,6 +23,11 @@ function Footer() {
   );
 }
 
+/**
+ * function to get the information about contact methods
+ *
+ * @returns contact information
+ */
 function ContactBanner() {
   return (
     <div>

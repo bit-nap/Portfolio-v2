@@ -21,6 +21,7 @@ import {
   SiDatagrip,
 } from "react-icons/si";
 
+// skill icons to display
 const skillIcons = [
   <FaPython />,
   <FaJava />,
@@ -40,6 +41,11 @@ const skillIcons = [
   <SiDatagrip />,
 ];
 
+/**
+ * creates a About page that contains professional skills
+ *
+ * @returns About page
+ */
 function About() {
   return (
     <div className="about-page">
@@ -54,11 +60,19 @@ function About() {
   );
 }
 
+/**
+ * function to shuffle skills with an effect visible everytime on the About page (duration < 5sec)
+ *
+ * @returns all the skills, shuffled w/ an effect
+ */
 function SkillsetBoxes() {
   const [skills, setSkills] = useState();
 
+  // effect for the icons suffle
   useEffect(() => {
     let shuffle = 0;
+
+    // interval for 25 shuffles
     const interval = setInterval(() => {
       if (shuffle < 25) {
         for (let i = skillIcons.length - 1; i > 0; i--) {
@@ -75,11 +89,12 @@ function SkillsetBoxes() {
         // console.log(shuffle);
         shuffle += 1;
       }
-    }, 100);
+    }, 100); // 1 shuffle every 0.1sec
 
     return () => clearInterval(interval);
   }, []);
 
+  // icons & format
   return (
     <>
       <IconContext.Provider value={{ color: "#fff", size: "6rem" }}>
