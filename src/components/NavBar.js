@@ -8,7 +8,7 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <a href="/Portfolio" className="navbar-logo">
+          <a href="/" className="navbar-logo">
             Norton A. Perez
           </a>
           <div className="menu-icon" onClick={handleClick}>
