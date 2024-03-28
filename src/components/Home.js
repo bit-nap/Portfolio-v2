@@ -36,7 +36,7 @@ function Home() {
         titleIndex %= possibleTitles.length;
         title = possibleTitles[titleIndex];
         operation = "inc";
-      } else if (index === title.length) {
+      } else if (index === title.length + 5) {
         operation = "dec";
         index -= 1;
       } else {
