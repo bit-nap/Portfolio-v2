@@ -57,6 +57,14 @@ function Home() {
       <h2 id="intro">Hello, I'm</h2>
       <h1 id="name">Norton Andres Perez</h1>
       <h3 id="title-placeholder">{titleDisplayed}</h3>
+
+      <div className="connect-links">
+        <a href={require("../assets/Perez_Norton_Andres_RIT_CS_CV.pdf")}>
+          Download CV
+        </a>
+        <a href="mailto:nap1118@rit.edu">Contact me</a>
+      </div>
+
       <div className="profile-links">
         <IconContext.Provider value={{ color: "#fff", size: 42 }}>
           <a className="profile-icons" href="https://github.com/bit-nap">

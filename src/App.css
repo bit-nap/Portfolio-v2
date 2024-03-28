@@ -196,8 +196,8 @@ h3 {
   position: relative;
   display: flex;
   padding: 2rem;
-  height: calc(15rem + 10vw);
-  width: calc(15rem + 10vw);
+  height: calc(13rem + 10vw);
+  width: calc(13rem + 10vw);
 }
 
 .main-pfp {
@@ -239,6 +239,15 @@ h3 {
   width: 2px;
   position: relative;
   bottom: -20%;
+}
+
+.connect-links {
+  display: flex;
+  gap: 1rem;
+}
+.connect-links > a {
+  font-size: 1.25rem;
+  padding: .25rem;
 }
 
 .profile-links {
