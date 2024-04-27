@@ -6,6 +6,7 @@ import { FaKaggle } from "react-icons/fa";
 import RSA from "../assets/RSA.png";
 import Qbert from "../assets/Q-bert1.png";
 import REST from "../assets/REST.png";
+import EER from "../assets/EER Diagram.png";
 
 // projects
 const projects = {
@@ -37,10 +38,10 @@ const projects = {
     github: "https://github.com/bit-nap/eStore-Project-Fall-2022",
   },
   "Database Application": {
+    image: EER,
     components: "Python, SQL, PostgreSQL",
     description:
       "Developed an Instagram-like application that allowed users to share their interests in Movies. Analyzed five million records of data and transformed them into a visual format to draw conclusions and share findings.",
-    github: "https://github.com/bit-nap/eStore-Project-Fall-2022",
   },
 };
 
