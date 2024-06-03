@@ -14,7 +14,7 @@ const projects = {
     components:
       "Java, SQL, B+ Trees, Database Optimization, Data Structures, Unix, Storage Management, Linux",
     description:
-      "In this project, I developed and tested a team-based database management system, focusing on integrating storage management, parsers, and B+ Tree indexing. For this project, we needed to ensure the system was compatible and operable on Linux machines, meeting stringent technical requirements and deadlines. By implementing advanced B+ tree indexing, we were able to significantly enhance data retrieval compared to when not using indexing. The system's indexing capabilities were seamlessly integrated for optimal performance without requiring user intervention. As a result of our collective efforts, the group achieved a grade of 94%.",
+      "This project was about developing and testing a database management system, focusing on integrating storage management, parsers, and B+ Tree indexing. We also needed to ensure the system was compatible and operable on Linux machines, meeting stringent technical requirements and deadlines. By implementing advanced B+ tree indexing, we significantly enhanced data retrieval compared to when not using indexing. The system's indexing capabilities were seamlessly integrated for optimal performance without user intervention. As a result of our collective efforts, the group achieved a grade of 94%.",
   },
   "Weather Data Mining": {
     components:
@@ -22,7 +22,7 @@ const projects = {
     description:
       "Conducted a semester-long group project analyzing weather patterns in Rochester, Buffalo, and Syracuse. Collaborated with three other team members to clean, preprocess, and analyze the data. Applied EDA and data mining techniques, including k-means clustering and neural network. Compiled findings in a detailed report and presented key outcomes with visual representations, demonstrating effective teamwork and advanced data analysis skills, which resulted in a grade of 98%.",
   },
-  "Encrypted server communications": {
+  "Encrypted Server Communications": {
     image: RSA,
     components:
       "C#, .NET, Multithreading, Public Key Cryptography, RSA Algorithm",
@@ -37,7 +37,7 @@ const projects = {
     kaggle:
       "https://www.kaggle.com/code/nortonperez/csci-331-digit-recognizer-notebook",
   },
-  "Q-bert AI agent": {
+  "Q-bert AI Agent": {
     image: Qbert,
     components: "Python, PyTorch, gymnasium, Neural Network",
     description:
